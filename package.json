@@ -173,12 +173,13 @@
     "q": "~0.9.7",
     "colors": "~0.6.2",
     "lodash": "~2.4.1",
-    "mime": "~1.2.11",
+    "mime": "~1.4.1",
     "log4js": "~0.6.3",
     "useragent": "~2.0.4",
     "graceful-fs": "~2.0.1",
-    "connect": "~2.26.0",
-    "source-map": "~0.1.31"
+    "connect": "~3.6.5",
+    "source-map": "~0.1.31",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "LiveScript": "~1.2.0",
@@ -229,9 +230,14 @@
   "main": "./lib/index",
   "bin": {},
   "engines": {
-    "node":  ">=0.8 <=0.12",
+    "node": ">=0.8 <=0.12",
     "iojs": "~1"
   },
   "version": "0.12.31",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
